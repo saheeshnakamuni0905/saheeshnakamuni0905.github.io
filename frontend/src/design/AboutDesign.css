@@ -1,0 +1,164 @@
+.hero-section {
+  padding-top: 0%;
+  margin-top: -1%;
+  background-color: #f8f9fa;
+  text-align: left;
+  height: 77vh;
+  font-family: 'Inconsolata', monospace;
+  position: relative; 
+  z-index: 1; 
+}
+
+.greeting {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bolder;
+  margin-top: 70px;
+}
+
+.highlight {
+  color: #6c63ff;
+}
+
+.headline {
+  font-size: 72px;
+  font-weight: bold;
+  margin: 20px 0;
+  white-space: nowrap; 
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.description {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.icons img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.buttons .btn {
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.illustration-container {
+  position: relative;
+  z-index: 3;
+}
+
+.illustration {
+  max-width: 100%; 
+  width: 80%; 
+  height: auto; 
+  margin: -245px 150px; 
+  display: block; 
+  padding: 0;
+}
+
+
+
+@media (max-width: 600px) {
+  .hero-section {
+    text-align: center; 
+  }
+
+  .greeting {
+    font-size: 20px; 
+    margin-top: 20px; 
+  }
+
+  .headline {
+    font-size: 30px; 
+    margin: 10px 0; 
+  }
+
+  .description {
+    font-size: 14px; 
+  }
+
+  .buttons .btn {
+    margin: 5px; 
+  }
+
+  .illustration-container {
+    order: 3; 
+    width: 100%; 
+    margin-top: 20px; 
+  }
+
+  .illustration {
+    display: block; 
+    margin: 0 auto; 
+    width: 70%; 
+    /* margin-top: 210px;  */
+    margin-bottom: -30%;
+    margin-left: 50px;
+  }
+
+  .button-container {
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dir-control {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-section {
+    text-align: center;
+    padding-top: 5%;
+    height: 85vh; /* Adjust height for iPad */
+  }
+
+  .greeting {
+    font-size: 22px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+  }
+
+  .headline {
+    font-size: 50px; /* Smaller headline for iPad */
+    margin: 15px 0;
+  }
+
+  .description {
+    font-size: 16px; /* Slightly smaller description */
+    margin-bottom: 25px;
+  }
+
+  .buttons .btn {
+    margin: 10px 5px;
+    font-size: 14px; /* Adjust button font size */
+  }
+
+  .illustration-container {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .illustration {
+    display: block;
+    margin: 0 auto;
+    width: 90%; /* Adjust width for iPad */
+    height: auto;
+    margin-top: -200px; /* Adjust illustration positioning */
+    margin-bottom: 0;
+    top: 150px;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  .dir-control {
+    width: 70%; /* Adjust width for better alignment */
+  }
+}

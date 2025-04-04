@@ -1,0 +1,387 @@
+.project-section {
+  padding: 30px 0px 0px 0px;
+  margin: 0px;
+  background-color: #f8f9fa;
+  font-family: 'Inconsolata', monospace;
+  height: 75vh;
+  position: relative;
+}
+
+.card-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 200px;
+  margin-left: -30px;
+}
+
+.card-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+.card-label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.project-card {
+  position: relative;
+  perspective: 1000px;
+  width: 100%;
+  height: 350px;
+  transform-origin: center center;
+  transition: transform 0.6s ease, z-index 0.6s ease, box-shadow 0.6s ease;
+  background: #6c63ff; /* Ensure the entire card has the background color */
+  border-radius: 10px;
+}
+
+.project-card .front,
+.project-card .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.project-card .front {
+  transform: rotateY(0deg);
+}
+
+.project-card .back {
+  transform: rotateY(180deg);
+}
+
+.card-checkbox:checked + .card-label .project-card .front {
+  transform: rotateY(180deg);
+}
+
+.card-checkbox:checked + .card-label .project-card .back {
+  transform: rotateY(0deg);
+}
+
+.project-card header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.project-card h2 {
+  font-size: 1.5rem;
+  color: black; 
+}
+
+.project-card h3 {
+  color: black;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+.project-card h4,
+.project-card p {
+  opacity: 0.8; 
+  font-size: 1rem;
+  color: black; 
+}
+
+.image-container {
+  height: 50px;
+  width: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+
+@media (max-width: 768px) {
+  .project-section {
+    padding: 30px 0;
+  }
+
+  .project-card {
+    height: 250px; /* Reduce the height of the project card */
+     /* Add some space between cards */
+  }
+
+  .project-card header {
+    height: 30px; /* Adjust the header height */
+    margin-bottom: 10px; /* Adjust bottom margin */
+  }
+
+  .project-card h2 {
+    font-size: 1.2rem; /* Adjust font size */
+  }
+
+  .project-card h3 {
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .project-card h4,
+  .project-card p {
+    font-size: 0.8rem; /* Adjust font size */
+  }
+
+  .image-container {
+    height: 100px; /* Adjust image container height */
+  }
+
+  .card-container {
+    width: 100%; /* Ensure the container takes full width */
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Ensure there is space between cards */
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .project-card {
+    width: 90%; /* Adjust width to fit better on smaller screens */
+    margin: 0 auto; /* Center the cards */
+  }
+}
+
+@media (max-width: 365px) {
+  .project-section {
+    padding: 30px 0;
+  }
+
+  .project-card {
+    height: 250px; /* Reduce the height of the project card */
+     /* Add some space between cards */
+  }
+
+  .project-card header {
+    height: 30px; /* Adjust the header height */
+    margin-bottom: 10px; /* Adjust bottom margin */
+  }
+
+  .project-card h2 {
+    font-size: 1.2rem; /* Adjust font size */
+  }
+
+  .project-card h3 {
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .project-card h4,
+  .project-card p {
+    font-size: 0.8rem; /* Adjust font size */
+  }
+
+  .image-container {
+    height: 100px; /* Adjust image container height */
+  }
+
+  .card-container {
+    width: 100%; /* Ensure the container takes full width */
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Ensure there is space between cards */
+    margin-top: 30px;
+    margin-bottom: 250px;
+  }
+
+  .project-card {
+    width: 90%; /* Adjust width to fit better on smaller screens */
+    margin: 0 auto; /* Center the cards */
+  }
+}
+
+
+@media (min-width: 366px) and (max-width: 767px) {
+  .project-section {
+    padding: 30px 0;
+  }
+
+  .project-card {
+    height: 250px; /* Reduce the height of the project card */
+     /* Add some space between cards */
+  }
+
+  .project-card header {
+    height: 30px; /* Adjust the header height */
+    margin-bottom: 10px; /* Adjust bottom margin */
+  }
+
+  .project-card h2 {
+    font-size: 1.2rem; /* Adjust font size */
+  }
+
+  .project-card h3 {
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .project-card h4,
+  .project-card p {
+    font-size: 0.8rem; /* Adjust font size */
+  }
+
+  .image-container {
+    height: 100px; /* Adjust image container height */
+  }
+
+  .card-container {
+    width: 100%; /* Ensure the container takes full width */
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Ensure there is space between cards */
+    margin-top: 30px;
+    margin-bottom: 250px;
+  }
+
+  .project-card {
+    width: 90%; /* Adjust width to fit better on smaller screens */
+    margin: 0 auto; /* Center the cards */
+  }
+}
+
+
+/* Extra Small Devices (Mobile Phones) */
+@media (max-width: 576px) {
+  .project-section {
+    padding: 20px 0;
+    height: auto;
+  }
+
+  .project-card {
+    height: 220px; /* Reduced height for small screens */
+    margin: 10px auto;
+    width: 90%;
+  }
+
+  .project-card h2 {
+    font-size: 1rem;
+  }
+
+  .project-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .project-card h4,
+  .project-card p {
+    font-size: 0.8rem;
+  }
+
+  .image-container {
+    height: 80px;
+  }
+}
+
+/* Small Devices (Tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .project-section {
+    padding: 25px 0;
+    height: auto;
+  }
+
+  .project-card {
+    height: 250px;
+    margin: 15px auto;
+    width: 85%;
+  }
+
+  .project-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .project-card h3 {
+    font-size: 1rem;
+  }
+
+  .project-card h4,
+  .project-card p {
+    font-size: 0.9rem;
+  }
+
+  .image-container {
+    height: 100px;
+  }
+}
+
+/* Medium Devices (Small Laptops) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .project-section {
+    padding: 30px 0;
+    height: 85vh;
+  }
+
+  .project-card {
+    height: 300px;
+    margin: 20px auto;
+  }
+
+  .card-container{
+    margin-bottom: 100%;
+  }
+
+  .project-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-card h4,
+  .project-card p {
+    font-size: 1rem;
+  }
+
+  .image-container {
+    height: 120px;
+  }
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .project-section {
+    padding: 40px 0;
+  }
+
+  .project-card {
+    height: 350px;
+    margin: 25px auto;
+    width: 70%;
+  }
+
+  .project-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .project-card h4,
+  .project-card p {
+    font-size: 1.1rem;
+  }
+
+  .image-container {
+    height: 150px;
+  }
+}
+
+
